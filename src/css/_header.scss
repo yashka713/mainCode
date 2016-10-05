@@ -5,7 +5,7 @@
     padding-right: 0;
   }
   .logo {
-    margin: 2px 0 0 33px;
+    margin: 2px 0 0 13px;
     float: left;
   }
   .header-logoName {
@@ -44,7 +44,7 @@
       background-image: url(../../src/img/sprite.png);
       background-position: -22px 0;
       display: inline-block;
-      margin: 36px 0 0 28px;
+      margin: 36px 0 0 7px;
     }
     .header-address {
       font-family: latobold, sans-serif;
@@ -69,15 +69,59 @@
       background-image: url(../../src/img/sprite.png);
       background-position: -57px 0;
       display: inline-block;
-      margin: 40px 0 0 28px;
+      margin: 40px 0 0 30px;
     }
-    .header-contact-mainNumber{
+    .header-contact-mainNumber {
       display: inline-block;
       vertical-align: top;
       font-size: 21px;
       width: 190px;
       font-weight: bold;
       margin: 36px 0 0px -11px;
+    }
+    .header-contact-allNumber {
+      display: inline-block;
+      margin: -2px 0 0 0;
+      vertical-align: top;
+      .chkBx {
+        .header-contact-label {
+          display: inline-block;
+          max-width: 100%;
+          margin-bottom: 5px;
+          font-weight: 700;
+          font-size: 16px;
+          margin-left: 3px;
+          margin-top: -1px;
+          word-spacing: -4px;
+        }
+        input[type=checkbox] {
+          position: absolute;
+          clip: rect(0, 0, 0, 0);
+        }
+
+        label {
+          cursor: pointer;
+        }
+
+        label:after {
+          content: " ";
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          position: relative;
+          background: url(../../src/img/sprite.png);
+          background-position: -3px 21px;
+          top: 3px;
+          margin-left: 8px;
+          margin-right: 5px;
+        }
+
+        input[type=checkbox]:checked + label:after {
+          background: url(../../src/img/sprite.png);
+          background-position: -2px 45px;
+          position: relative;
+        }
+      }
     }
   }
 }
