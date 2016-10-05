@@ -1,0 +1,83 @@
+/* HEADER */
+.header {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo {
+    margin: 2px 0 0 33px;
+    float: left;
+  }
+  .header-logoName {
+    margin: 0 0 0 5px;
+    text-transform: uppercase;
+    font-family: latobold, sans-serif;
+    font-size: 20px;
+    color: #46b6e3;
+    float: left;
+    color: #46b6e3;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    width: 400px;
+  }
+  .header-logoName--1 {
+    margin: 23px 0 0 8px;
+    letter-spacing: 0.27px;
+  }
+  .header-logoName--2 {
+    margin: -1px 0 0 8px;
+    letter-spacing: 1.2px;
+    word-spacing: 2px;
+    width: 416px;
+  }
+  .header-logoName--3 {
+    margin: -1px 0 0 9px;
+    word-spacing: -4px;
+    letter-spacing: 1.65px;
+  }
+  .header-location {
+    float: left;
+
+    .header-location-address {
+      width: 35px;
+      height: 50px;
+      background-image: url(../../src/img/sprite.png);
+      background-position: -22px 0;
+      display: inline-block;
+      margin: 36px 0 0 28px;
+    }
+    .header-address {
+      font-family: latobold, sans-serif;
+      font-size: 21px;
+      font-weight: bold;
+      color: #d3d3d3;
+      display: inline-block;
+      width: 260px;
+      margin: 0 0 0 4px;
+      line-height: 26px;
+      height: 75px;
+      letter-spacing: -0.4px;
+      vertical-align: super;
+    }
+  }
+  .header-contact {
+    float: left;
+    color: #d3d3d3;
+    .header-contact-phone {
+      width: 45px;
+      height: 50px;
+      background-image: url(../../src/img/sprite.png);
+      background-position: -57px 0;
+      display: inline-block;
+      margin: 40px 0 0 28px;
+    }
+    .header-contact-mainNumber{
+      display: inline-block;
+      vertical-align: top;
+      font-size: 21px;
+      width: 190px;
+      font-weight: bold;
+      margin: 36px 0 0px -11px;
+    }
+  }
+}
