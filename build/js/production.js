@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$(".chkBx").on("click",function(e){1==$("#chkBx-allNumber").prop("checked")?$(".header-contact-allNumber").find(".chkBx-showPhone").removeClass("hide-phone").addClass("show-phone"):$(".header-contact-allNumber").find(".chkBx-showPhone").removeClass("show-phone").addClass("hide-phone")})});
