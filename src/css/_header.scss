@@ -78,12 +78,15 @@
       width: 190px;
       font-weight: bold;
       margin: 36px 0 0px -11px;
+      z-index: 3;
     }
     .header-contact-allNumber {
       display: inline-block;
       margin: -2px 0 0 0;
       vertical-align: top;
+
       .chkBx {
+        z-index: 3;
         .header-contact-label {
           display: inline-block;
           max-width: 100%;
@@ -121,6 +124,45 @@
           background-position: -2px 45px;
           position: relative;
         }
+
+      }
+      .chkBx-showPhone {
+        display: none;
+        font-size: 21px;
+        font-weight: bold;
+        color: #d3d3d3;
+        width: 200px;
+        margin-left: -11px;
+        margin-top: -56px;
+        opacity: 0;
+      }
+      .show-phone {
+        display: block;
+        animation-name: show-phone;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-direction: normal;
+        margin-left: -11px;
+        margin-top: -6px;
+        opacity: 1;
+      }
+      @keyframes show-phone {
+        from {
+          margin-left: -11px;
+          margin-top: -56px;
+          opacity: 0;
+        }
+        to {
+          margin-left: -11px;
+          margin-top: -6px;
+          opacity: 1;
+        }
+      }
+      .hide-phone {
+        margin-left: -11px;
+        margin-top: -56px;
+        opacity: 0;
+        display: none;
       }
     }
   }

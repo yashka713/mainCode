@@ -86,37 +86,73 @@
     font-size: 21px;
     width: 190px;
     font-weight: bold;
-    margin: 36px 0 0px -11px; }
+    margin: 36px 0 0px -11px;
+    z-index: 3; }
   .header .header-contact .header-contact-allNumber {
     display: inline-block;
     margin: -2px 0 0 0;
     vertical-align: top; }
-    .header .header-contact .header-contact-allNumber .chkBx .header-contact-label {
-      display: inline-block;
-      max-width: 100%;
-      margin-bottom: 5px;
-      font-weight: 700;
-      font-size: 16px;
-      margin-left: 3px;
-      margin-top: -1px;
-      word-spacing: -4px; }
-    .header .header-contact .header-contact-allNumber .chkBx input[type=checkbox] {
-      position: absolute;
-      clip: rect(0, 0, 0, 0); }
-    .header .header-contact .header-contact-allNumber .chkBx label {
-      cursor: pointer; }
-    .header .header-contact .header-contact-allNumber .chkBx label:after {
-      content: " ";
-      display: inline-block;
-      width: 17px;
-      height: 17px;
-      position: relative;
-      background: url(../../src/img/sprite.png);
-      background-position: -3px 21px;
-      top: 3px;
-      margin-left: 8px;
-      margin-right: 5px; }
-    .header .header-contact .header-contact-allNumber .chkBx input[type=checkbox]:checked + label:after {
-      background: url(../../src/img/sprite.png);
-      background-position: -2px 45px;
-      position: relative; }
+    .header .header-contact .header-contact-allNumber .chkBx {
+      z-index: 3; }
+      .header .header-contact .header-contact-allNumber .chkBx .header-contact-label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-size: 16px;
+        margin-left: 3px;
+        margin-top: -1px;
+        word-spacing: -4px; }
+      .header .header-contact .header-contact-allNumber .chkBx input[type=checkbox] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0); }
+      .header .header-contact .header-contact-allNumber .chkBx label {
+        cursor: pointer; }
+      .header .header-contact .header-contact-allNumber .chkBx label:after {
+        content: " ";
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        position: relative;
+        background: url(../../src/img/sprite.png);
+        background-position: -3px 21px;
+        top: 3px;
+        margin-left: 8px;
+        margin-right: 5px; }
+      .header .header-contact .header-contact-allNumber .chkBx input[type=checkbox]:checked + label:after {
+        background: url(../../src/img/sprite.png);
+        background-position: -2px 45px;
+        position: relative; }
+    .header .header-contact .header-contact-allNumber .chkBx-showPhone {
+      display: none;
+      font-size: 21px;
+      font-weight: bold;
+      color: #d3d3d3;
+      width: 200px;
+      margin-left: -11px;
+      margin-top: -56px;
+      opacity: 0; }
+    .header .header-contact .header-contact-allNumber .show-phone {
+      display: block;
+      animation-name: show-phone;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-direction: normal;
+      margin-left: -11px;
+      margin-top: -6px;
+      opacity: 1; }
+
+@keyframes show-phone {
+  from {
+    margin-left: -11px;
+    margin-top: -56px;
+    opacity: 0; }
+  to {
+    margin-left: -11px;
+    margin-top: -6px;
+    opacity: 1; } }
+    .header .header-contact .header-contact-allNumber .hide-phone {
+      margin-left: -11px;
+      margin-top: -56px;
+      opacity: 0;
+      display: none; }
