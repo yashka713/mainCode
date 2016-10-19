@@ -31,6 +31,8 @@
 .titleBtnGroup .btn-askDoctor{margin-left:7px;margin-top:2px;background:0;border:1px solid #fff}
 .factsAboutCompany{margin:72px 0 0 188px}.factsAboutCompany .factsAboutCompany-item{display:inline-block;width:201px;height:248px;background-color:rgba(70,182,227,.86);color:#fff}
 .factsAboutCompany .factsAboutCompany-item .factsAboutCompany-number{font-size:40px;text-align:center;margin:9px 0 0 4px;letter-spacing:1px;font-weight:900;font-family:latobold}
-.factsAboutCompany .factsAboutCompany-item .factsAboutCompany-fact{margin:99px 0 0 9px;font-size:17.5px;text-align:center;line-height:20px}
-.factsAboutCompany .factsAboutCompany-item .factsAboutCompany-separator{width:45px;margin:0}
+.factsAboutCompany .factsAboutCompany-item .factsAboutCompany-fact{margin:99px 0 0 10px;font-size:17.5px;text-align:center;line-height:20px}
+.factsAboutCompany .factsAboutCompany-item .factsAboutCompany-separator{width:108px;margin:12px 0 0 50px}
 .factsAboutCompany .lighter{background-color:#70c7ea;background-color:rgba(112,199,234,.86)}
+.modal-window{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);transition:10s}
+.paragraph{display:block;margin:100px auto;background-color:#9CF;padding:20px;font-size:13px;width:500px;height:200px;line-height:20px}
