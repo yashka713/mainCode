@@ -2,8 +2,8 @@
  * Created by Ярик on 04.10.2016.
  */
 $(document).ready(function () {
-    //$('.header-contact-allNumber').find('label:after').css({'backgroundPosition': '-3px 11px', 'backgroundColor':'aqua'});
     var $appendModal = $('<div class="modal-window">');
+
     $('.chkBx').on('click', function (e) {
 
         if ($('#chkBx-allNumber').prop("checked") == true) {
@@ -26,18 +26,39 @@ $(document).ready(function () {
             $appendModal.show();
         }else{
             $('body').append($appendModal);
-            $('.modal-window').append('<div class="paragraph">' + '</div>');
+            $paragraph = $('<div class="paragraph">' + '</div>');
+            $('.modal-window').append($paragraph);
         }
+
+        $spanClose = $('<span class="paragraph-close">X</span>');
         $title = $('<p class="paragraph-title">' + objModal.title + '</p>');
-        $inputName = $('<input type="text" class="paragraph-name" placeholder="Ваше имя:">');
-        $inputPhone = $('<input type="text" class="paragraph-phone" placeholder="Ваш телефон:">');
+        $inputName = $('<input type="text" class="input-modal" placeholder="Ваше имя:">');
+        $inputPhone = $('<input type="text" class="input-modal" placeholder="Ваш телефон:">');
         $btnModal = $('<button class="btn-custom btn-appointment">' + objModal.btn + '</button>');
-        $('.modal-window').find('div.paragraph').append($title).append($inputName).append($inputPhone).append($btnModal);
+        $paragraph
+            .append($spanClose)
+            .append($title)
+            .append($inputName)
+            .append($inputPhone)
+            .append($btnModal);
+
+        $spanClose.on('click', function(e){
+            console.log('fcvfev');
+            $appendModal.hide();
+            $title.remove();
+            $inputName.remove();
+            $inputPhone.remove();
+            $btnModal.remove();
+        });
+
     }
 
-    $(".btn-appointment").on('click', onClickConsult, objModalForm.appointments);
-    $appendModal.on('click', function(){
-        $appendModal.hide();
+    $(".btn-appointment").on('click', function (e) {
+        onClickConsult(objModalForm.appointments);
+    });
+
+    $(".btn-askDoctor").on('click', function (e) {
+        onClickConsult(objModalForm.consultation);
     });
 
 });
