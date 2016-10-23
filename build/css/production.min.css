@@ -40,3 +40,8 @@
 .modal-window .paragraph .paragraph-title{font-size:20px;text-align:center;font-family:lato,sans-serif;color:#70c7ea}
 .modal-window .paragraph .input-modal{width:80%;margin:2% 10%;height:38px;font-size:23px;padding:3px 5px;border-radius:7px;border-color:#70c7ea}
 .modal-window .paragraph .btn-custom{width:80%;margin:5px 10%;background-color:#70c7ea;border-color:#70c7ea;font-size:20px;padding:8px;color:#fff;border-radius:9px}
+.consult{background-color:#ebebeb;height:484px}.consult .consult-title{margin-top:190px}
+.consult .consult-title .consult-titleText{text-align:center;font-size:26.5px;font-family:latobold;color:#46b6e3;font-weight:700;margin-left:10px}
+.consult .consult-input{margin:42px 0 0}.consult .consult-input .consult-inputName{width:365px;font-family:latobold;padding:9px 25px;border-radius:10px;height:57px;margin-right:27px;margin-left:210px;border:0;font-size:22px}
+.consult .consult-input .consult-inputPhone{width:365px;font-family:latobold;padding:9px 23px;border-radius:10px;height:57px;border:0;font-size:22px}
+.consult .consult-btn{margin-top:31px}.consult .consult-btn .consult-btnBtn{width:473px;height:58px;text-align:center;color:#fff;background-color:#46b6e3;border:0;font-size:28px;font-family:latoregular;padding:0;margin-left:353px}

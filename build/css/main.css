@@ -314,3 +314,51 @@
       padding: 8px;
       color: white;
       border-radius: 9px; }
+
+.consult {
+  background-color: #ebebeb;
+  height: 484px; }
+  .consult .consult-title {
+    margin-top: 190px; }
+    .consult .consult-title .consult-titleText {
+      text-align: center;
+      font-size: 26.5px;
+      font-family: latobold;
+      color: #46b6e3;
+      font-weight: bold;
+      margin-left: 10px; }
+  .consult .consult-input {
+    margin: 42px 0 0 0; }
+    .consult .consult-input .consult-inputName {
+      width: 365px;
+      font-family: latobold;
+      padding: 9px 25px;
+      border-radius: 10px;
+      height: 57px;
+      margin-right: 27px;
+      margin-left: 210px;
+      border: none;
+      font-size: 22px; }
+    .consult .consult-input .consult-inputPhone {
+      width: 365px;
+      font-family: latobold;
+      padding: 9px 23px;
+      border-radius: 10px;
+      height: 57px;
+      border: none;
+      font-size: 22px; }
+  .consult .consult-btn {
+    margin-top: 31px; }
+    .consult .consult-btn .consult-btnBtn {
+      width: 473px;
+      height: 58px;
+      text-align: center;
+      color: white;
+      background-color: #46b6e3;
+      border: none;
+      font-size: 28px;
+      font-family: latoregular;
+      /* font-weight: bold; */
+      padding: 0;
+      margin-left: 353px;
+      /* margin-top: -2px; */ }
