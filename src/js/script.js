@@ -3,7 +3,8 @@
  */
 $(document).ready(function () {
     var $modalWindow = $('.modal-window');
-    var $objClientData = {};
+    var $objClientDataFromModal = {};
+    var $objClientDataFromSite = {};
 
     $('.chkBx').on('click', function (e) {
 
@@ -52,15 +53,23 @@ $(document).ready(function () {
         $modalWindow.find('.paragraph').prepend($title);
         $modalWindow.find('.paragraph').append($button);
         $button.on('click', function () {
-            $objClientData.name = $('#clientName').val();
-            $objClientData.phone = $('#clientPhone').val();
+            $objClientDataFromModal.name = $('#clientName').val();
+            $objClientDataFromModal.phone = $('#clientPhone').val();
             $('#clientName').val('');
             $('#clientPhone').val('');
-            console.log($objClientData);
+            console.log($objClientDataFromModal);
             $('.modal-window').removeClass('show').addClass('hide');
         });
         e.stopPropagation();
     };
+
+    $('.consult-btnBtn').on('click', function (e) {
+        $objClientDataFromSite.name = $('.consult-inputName').val();
+        $objClientDataFromSite.phone = $('.consult-inputPhone').val();
+        console.log($objClientDataFromSite);
+        $('.consult-inputName').val('');
+        $('.consult-inputPhone').val('');
+    })
 
 });
 
