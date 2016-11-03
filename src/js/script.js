@@ -2,7 +2,8 @@
  * Created by Ярик on 04.10.2016.
  */
 $(document).ready(function () {
-    var $appendModal = $('<div class="modal-window">');
+    var $modalWindow = $('.modal-window');
+    var objClientData
 
     $('.chkBx').on('click', function (e) {
 
@@ -21,55 +22,50 @@ $(document).ready(function () {
 
     });
 
-    function onClickConsult(objModal){
-        if($('body').find('div').hasClass('modal-window')){
-            $appendModal.show();
-        }else{
-            $('body').append($appendModal);
-            $paragraph = $('<div class="paragraph">' + '</div>');
-            $('.modal-window').append($paragraph);
-        }
+    /* Show modal window */
+    $("body").click(function (e) {
+        $('.modal-window').removeClass('show').addClass('hide');
+    });
 
-        $spanClose = $('<span class="paragraph-close">X</span>');
-        $title = $('<p class="paragraph-title">' + objModal.title + '</p>');
-        $inputName = $('<input type="text" class="input-modal" placeholder="Ваше имя:">');
-        $inputPhone = $('<input type="text" class="input-modal" placeholder="Ваш телефон:">');
-        $btnModal = $('<button class="btn-custom btn-appointment">' + objModal.btn + '</button>');
-        $paragraph
-            .append($spanClose)
-            .append($title)
-            .append($inputName)
-            .append($inputPhone)
-            .append($btnModal);
+    $(".paragraph").click(function (e) {
+        e.stopImmediatePropagation();
+    });
 
-        $spanClose.on('click', function(e){
-            console.log('fcvfev');
-            $appendModal.hide();
-            $title.remove();
-            $inputName.remove();
-            $inputPhone.remove();
-            $btnModal.remove();
+    $('.btn-appointment').on('click', function (e) {
+        modalWindowConsultation(e, objModalForm.appointments);
+    });
+
+    $('.btn-askDoctor').on('click', function (e) {
+        modalWindowConsultation(e, objModalForm.consultation);
+    });
+
+    $('.paragraph-close').on('click', function (e) {
+        $('.modal-window').removeClass('show').addClass('hide');
+    });
+
+    function modalWindowConsultation (e, obj){
+        $title = $('<p class="paragraph-title">' + obj.title + '</p>');
+        $modalWindow.removeClass('hide').addClass('show');
+        $button = $('<button class="btn-custom">' + obj.title + '</button>');
+        $modalWindow.find('.paragraph').find('.btn-custom').remove();
+        $modalWindow.find('.paragraph').find('.paragraph-title').remove();
+        $modalWindow.find('.paragraph').prepend($title);
+        $modalWindow.find('.paragraph').append($button);
+        $button.on('click', function () {
+
         });
-
-    }
-
-    $(".btn-appointment").on('click', function (e) {
-        onClickConsult(objModalForm.appointments);
-    });
-
-    $(".btn-askDoctor").on('click', function (e) {
-        onClickConsult(objModalForm.consultation);
-    });
+        e.stopPropagation();
+    };
 
 });
 
 var objModalForm = {
-    appointments:{
-        title:'Записаться на прием',
-        btn:'Подтвердить запись'
+    appointments: {
+        title: 'Записаться на прием',
+        btn: 'Подтвердить запись'
     },
-    consultation:{
-        title:'Задать вопрос врачу',
-        btn:'Задать вопрос'
+    consultation: {
+        title: 'Задать вопрос врачу',
+        btn: 'Задать вопрос'
     }
 };

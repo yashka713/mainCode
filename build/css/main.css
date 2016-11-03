@@ -315,6 +315,12 @@
       color: white;
       border-radius: 9px; }
 
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
 .consult {
   background-color: #ebebeb;
   height: 484px; }
