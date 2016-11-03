@@ -3,7 +3,7 @@
  */
 $(document).ready(function () {
     var $modalWindow = $('.modal-window');
-    var objClientData
+    var $objClientData = {};
 
     $('.chkBx').on('click', function (e) {
 
@@ -52,7 +52,12 @@ $(document).ready(function () {
         $modalWindow.find('.paragraph').prepend($title);
         $modalWindow.find('.paragraph').append($button);
         $button.on('click', function () {
-
+            $objClientData.name = $('#clientName').val();
+            $objClientData.phone = $('#clientPhone').val();
+            $('#clientName').val('');
+            $('#clientPhone').val('');
+            console.log($objClientData);
+            $('.modal-window').removeClass('show').addClass('hide');
         });
         e.stopPropagation();
     };
